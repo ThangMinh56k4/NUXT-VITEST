@@ -1,0 +1,37 @@
+@use '../base/variables';
+
+html .el-radio {
+  --el-radio-text-color: inherit;
+
+  &__inner {
+    --el-radio-input-width: 16px;
+    --el-radio-input-height: 16px;
+    --el-radio-input-border: 1px solid #{variables.$color-gray-300};
+  }
+
+  &__input {
+    &.is-checked {
+      --el-color-primary: #{variables.$color-primary-800};
+
+      .el-radio {
+        &__inner {
+          background: #{variables.$color-white};
+
+          &::after {
+            width: 6px;
+            height: 6px;
+            background-color: var(--el-color-primary);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-checked {
+    .el-radio {
+      &__label {
+        color: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '../base/variables';
+
+html .el-dialog {
+  border-radius: variables.$border-radius-5xl;
+
+  &__header {
+    @apply mr-0 text-center flex justify-center px-15.5 pt-12.5 pb-0;
+  }
+
+  &__title {
+    @apply font-semibold text-primary-700 text-3xl;
+  }
+
+  &__headerbtn {
+    background: url('~~/assets/img/close-modal.svg') center no-repeat;
+    @apply top-5 right-5;
+
+    .el-icon {
+      display: none;
+    }
+  }
+
+  &.is-busy {
+    .el-dialog__headerbtn {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+}

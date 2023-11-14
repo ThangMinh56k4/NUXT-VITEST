@@ -1,0 +1,33 @@
+@use '../base/variables';
+
+html .tag {
+  @apply inline-block py-0.5 px-0.5 rounded-full border;
+
+  &-success {
+    @apply border-success-600 text-success-600 bg-green-50;
+  }
+
+  &-error {
+    @apply border-error-600 text-error-600 bg-error-50;
+  }
+
+  &-default {
+    @apply border-gray-70 text-gray-70 bg-gray-100;
+  }
+
+  &-primary {
+    @apply border-primary-700 text-primary-700 bg-primary-50;
+  }
+
+  &-warning {
+    @apply border-warning-600 text-warning-600 bg-warning-50;
+  }
+
+  &-gray-blue {
+    @apply border-gray-blue-700 text-gray-blue-700 bg-gray-blue-50;
+  }
+
+  &-moss {
+    @apply border-moss-600 text-moss-600 bg-gray-blue-50;
+  }
+}

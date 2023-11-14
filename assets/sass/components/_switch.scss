@@ -1,0 +1,11 @@
+@use '../base/variables';
+
+html .el-switch {
+  --el-switch-on-color: #{variables.$color-primary-700};
+  --el-switch-off-color: #{variables.$color-gray-200};
+
+  &__core {
+    width: 36px;
+    min-width: 36px;
+  }
+}

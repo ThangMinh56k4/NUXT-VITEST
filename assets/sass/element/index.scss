@@ -1,0 +1,50 @@
+@use '../base/variables';
+
+$-colors: (
+  'primary': (
+    'base': variables.$color-primary,
+  ),
+  'success': (
+    'base': variables.$color-success,
+  ),
+  'warning': (
+    'base': variables.$color-warning,
+  ),
+  'danger': (
+    'base': variables.$color-error,
+  ),
+  'error': (
+    'base': variables.$color-error,
+  ),
+  'info': (
+    'base': variables.$color-info,
+  ),
+);
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: $-colors,
+  $input-font-size: (
+    'large': variables.$font-size-lg,
+    'default': variables.$font-size-md,
+    'small': variables.$font-size-sm,
+  ),
+  $select: (
+    'input-font-size': variables.$font-size-md,
+  ),
+  $font-size: (
+    'extra-large': variables.$font-size-xl,
+    'large': variables.$font-size-lg,
+    'medium': variables.$font-size-md,
+    'base': variables.$font-size-base,
+    'small': variables.$font-size-sm,
+    'extra-small': variables.$font-size-xs,
+  ),
+  $font-family: (
+    '': variables.$font-family,
+  ),
+  $text-color: (
+    placeholder: variables.$color-gray-400,
+  )
+);
+
+@use './dark.scss';

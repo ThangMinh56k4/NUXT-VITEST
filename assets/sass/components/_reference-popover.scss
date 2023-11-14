@@ -1,0 +1,15 @@
+.reference-popover {
+  box-shadow: 8px 8px 20px 0 #0000005c;
+  @apply text-sm border \!border-gray-200 \!bg-primary-0 \!text-gray-500 rounded-lg p-3;
+
+  .loading-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  .tabs__item {
+    @apply \!text-base;
+  }
+}

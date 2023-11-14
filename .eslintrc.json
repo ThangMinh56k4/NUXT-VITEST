@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:nuxt/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["vitest"],
+  "rules": {
+    "vue/multi-word-component-names": 0,
+    "space-before-function-paren": "off",
+    "vue/no-setup-props-destructure": "off",
+    "prettier/prettier": ["error", { "singleQuote": true, "semi": false }]
+  }
+}

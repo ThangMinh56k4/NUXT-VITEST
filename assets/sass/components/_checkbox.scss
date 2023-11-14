@@ -1,0 +1,44 @@
+@use '../base/variables';
+
+html .el-checkbox {
+  --el-checkbox-text-color: inherit;
+  --el-checkbox-checked-text-color: inherit;
+
+  &__inner {
+    --el-checkbox-input-width: 16px;
+    --el-checkbox-input-height: 16px;
+    --el-checkbox-border-radius: 4px;
+    --el-checkbox-input-border: 1px solid #{variables.$color-gray-300};
+
+    &::after {
+      top: 2px;
+      left: 5px;
+    }
+  }
+
+  &__input {
+    &.is-checked {
+      .el-checkbox {
+        &__inner {
+          --el-checkbox-checked-bg-color: transparent;
+          --el-checkbox-checked-input-border-color: #{variables.$color-primary-800};
+          --el-checkbox-checked-icon-color: #{variables.$color-primary-800};
+        }
+      }
+    }
+
+    &.is-indeterminate {
+      .el-checkbox {
+        &__inner {
+          --el-checkbox-checked-bg-color: transparent;
+          --el-checkbox-checked-input-border-color: #{variables.$color-primary-800};
+          --el-checkbox-checked-icon-color: #{variables.$color-primary-800};
+
+          &::before {
+            top: 6px;
+          }
+        }
+      }
+    }
+  }
+}

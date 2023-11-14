@@ -1,0 +1,27 @@
+@use '../base/variables';
+
+$dropdown-menu-box-shadow: 0 4px 20px 0 #00000040;
+
+html .el-popper {
+  --el-popper-border-radius: #{variables.$border-radius-2xl};
+  --el-dropdown-menu-box-shadow: #{$dropdown-menu-box-shadow};
+  --el-border-color-light: #{variables.$color-gray-200};
+  --el-text-color-regular: #{variables.$color-gray-600};
+
+  overflow: hidden;
+}
+
+html .el-dropdown-menu {
+  --el-border-radius-base: #{variables.$border-radius-2xl};
+
+  &__item {
+    --el-font-size-base: #{variables.$font-size-lg};
+
+    min-height: 30px;
+
+    &.active {
+      color: #{variables.$color-primary-600};
+      font-weight: bold;
+    }
+  }
+}

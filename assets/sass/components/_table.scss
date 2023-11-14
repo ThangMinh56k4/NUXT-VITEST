@@ -1,0 +1,39 @@
+@use '../base/variables';
+
+html .el-table {
+  --el-fill-color-lighter: #{variables.$color-gray-0};
+  --el-table-text-color: #{variables.$color-gray-800};
+
+  &.vertical-align-top {
+    .el-table__cell {
+      vertical-align: top;
+    }
+  }
+
+  thead {
+    --el-table-header-text-color: #{variables.$color-gray-800};
+    --el-table-header-bg-color: #{variables.$color-primary-0};
+    --el-table-border: 1px solid #{variables.$color-primary-200} !important;
+  }
+
+  .selected-row {
+    --el-table-tr-bg-color: #{variables.$color-primary-100};
+    --el-fill-color-lighter: #{variables.$color-primary-100};
+    --el-table-row-hover-bg-color: #{variables.$color-primary-200};
+
+    .el-table-fixed-column--right,
+    .el-table-fixed-column--left {
+      --el-bg-color: #{variables.$color-primary-100};
+    }
+  }
+
+  &__row {
+    .el-table__cell {
+      --el-table-border: 1px solid transparent;
+    }
+  }
+
+  border: 1px solid #{variables.$color-primary-100};
+  border-radius: 10px;
+  z-index: 1;
+}

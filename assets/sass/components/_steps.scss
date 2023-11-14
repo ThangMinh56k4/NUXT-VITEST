@@ -1,0 +1,43 @@
+.el-step__head {
+  &.is-process,
+  &.is-finish {
+    .el-step__icon {
+      @apply border-primary-100 bg-primary-700 transition-all;
+    }
+
+    .el-step__icon-inner {
+      @apply text-white;
+    }
+  }
+
+  &.is-finish {
+    .el-step__line-inner {
+      @apply bg-primary-700  h-1 rounded-2.5 transition-all ease-in-out duration-300 \!w-full;
+    }
+  }
+
+  .el-step {
+    &__icon {
+      @apply w-10 h-10 \!border \!border-4 \!border-gray-100 bg-white cursor-no-drop ease-in-out duration-500;
+    }
+
+    &__icon-inner {
+      @apply text-gray-400 text-md;
+    }
+  }
+
+  .el-step__line {
+    @apply \!h-1 \!bg-gray-100 \!rounded-2.5 \!left-11 \!top-1/2;
+
+    width: calc(100% - 50px);
+    transform: translateY(-50%);
+  }
+}
+
+.el-step:not(.disable) {
+  .el-step__head {
+    .el-step__icon {
+      @apply cursor-pointer;
+    }
+  }
+}
